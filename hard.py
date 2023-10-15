@@ -1,4 +1,8 @@
 """
+Tommy Ju
+A01347715
+Set F
+
 Define a function called is_valid_parity. It accepts two strings. The first is called codeword
 and the second is called parity.
 
@@ -46,3 +50,55 @@ Prove your function works in the docstring with these doctests:
 
 No main function is required.
 """
+
+
+def is_valid_parity(codeword, parity):
+    """
+    Checks if a string is correctly parity-encoded
+
+    :param codeword: a string representing a parity-encoded binary value
+    :param parity: a string representing parity
+    :precondition: codeword must be a NON-EMPTY string of parity-encoded binary digits
+    :precondition: parity must be "EVEN" or "ODD"
+    :postcondition: determines if a codeword is parity-encoded correctly
+    :return: A boolean that is True if codeword is a valid parity encoding
+
+    >>> is_valid_parity("101", "EVEN")
+    True
+    >>> is_valid_parity("11", "EVEN")
+    True
+    >>> is_valid_parity("111111111100000000001010110101", "EVEN")
+    True
+    >>> is_valid_parity("10", "ODD")
+    True
+    >>> is_valid_parity("111", "ODD")
+    True
+    >>> is_valid_parity("1111111111000011111000001010110101", "ODD")
+    True
+    >>> is_valid_parity("111", "EVEN")
+    False
+    >>> is_valid_parity("11111111100000000001010110101", "EVEN")
+    False
+    >>> is_valid_parity("11", "ODD")
+    False
+    >>> is_valid_parity("101", "ODD")
+    False
+    >>> is_valid_parity("11111111111000011111000001010110101", "ODD")
+    False
+    """
+
+    number_of_ones = 0
+    for i in codeword:
+        number_of_ones += int(i)
+
+    if number_of_ones % 2 == 0:
+        actual_parity = "EVEN"
+    else:
+        actual_parity = "ODD"
+
+    # check if codeword is encoded correctly
+    if actual_parity == parity:
+        return True
+    else:
+        return False
+    
