@@ -88,4 +88,3 @@ def is_valid_parity(codeword, parity):
     """
 
     return codeword.count("1") % 2 == 0 and parity == "EVEN" or codeword.count("1") % 2 != 0 and parity == "ODD"
-
