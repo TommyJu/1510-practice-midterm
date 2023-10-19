@@ -14,3 +14,5 @@ def cleaner(measurements, maximum):
 
 cleaner([1.5, 2.0, 10.7, 9.2], 10.6)
 cleaner([3.3333333, 3.1000001, -5, 0, 1.2], 3.1)
+
+#USE MAIN FUNCTION

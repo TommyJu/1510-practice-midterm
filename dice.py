@@ -30,5 +30,5 @@ def roll_6_sided_die(number_of_rolls):
     {print(f"Side {key}: {value} rolls") for (key, value) in results.items()}
     print("Total rolls:", sum(results.values()))
 
-
+# USE MAIN FUNCTION
 roll_6_sided_die(1000000)
