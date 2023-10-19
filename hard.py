@@ -87,18 +87,5 @@ def is_valid_parity(codeword, parity):
     False
     """
 
-    number_of_ones = 0
-    for i in codeword:
-        number_of_ones += int(i)
+    return codeword.count("1") % 2 == 0 and parity == "EVEN" or codeword.count("1") % 2 != 0 and parity == "ODD"
 
-    if number_of_ones % 2 == 0:
-        actual_parity = "EVEN"
-    else:
-        actual_parity = "ODD"
-
-    # check if codeword is encoded correctly
-    if actual_parity == parity:
-        return True
-    else:
-        return False
-    
