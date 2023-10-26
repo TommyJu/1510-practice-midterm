@@ -24,7 +24,8 @@ def roll_6_sided_die(number_of_rolls):
     results = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     counter = 0
     while counter < number_of_rolls:
-        results[randint(1, 6)] += 1
+        roll = randint(1, 6)
+        results[roll] += 1
         counter += 1
 
     {print(f"Side {key}: {value} rolls") for (key, value) in results.items()}
