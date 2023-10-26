@@ -23,6 +23,8 @@ import random
 
 def tally_dice(sides, max_rolls):
 
+    print(f"\nYou roll a {sides} sided dice {max_rolls} times.")
+
     # Generate the dictionary
     tally = {}
     for number in range(1, sides + 1):
@@ -35,14 +37,16 @@ def tally_dice(sides, max_rolls):
 
         max_rolls -= 1
 
-    return tally
+    # Print results
+    for key, value in tally.items():
+        print(f"🎲 {key}: {value} rolls ")
 
 
 def main():
-    print(tally_dice(1, 0))
-    print(tally_dice(1, 6))
-    print(tally_dice(5, 10))
-    print(tally_dice(2, 9999))
+    tally_dice(1, 0)
+    tally_dice(1, 6)
+    tally_dice(5, 10)
+    tally_dice(2, 9999)
 
 
 if __name__ == "__main__":
