@@ -8,6 +8,8 @@ the number of integers in the list that are a multiple of the given number.
 Invoke this function from the main method with a set of arguments that will return
 the value 3.
 """
+
+
 def cutoff(list_of_integers, integer):
     """
     Count how many numbers in the list are multiples of a given number
@@ -28,6 +30,7 @@ def cutoff(list_of_integers, integer):
         else:
             continue
     return count
+
 
 def main():
     print(cutoff([5, 10, 15], 5))

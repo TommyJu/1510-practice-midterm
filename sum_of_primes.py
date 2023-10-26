@@ -14,16 +14,15 @@ The bounds are included.
 # bounds are included
 def sum_of_primes(lower_bound, upper_bound):
 
-    sum = 0
+    result = 0
     numbers = list(range(lower_bound, upper_bound + 1))
 
     for number in numbers:
         if is_prime(number):
-            sum += number
+            result += number
         else:
             continue
-    return sum
-
+    return result
 
 
 def is_prime(integer):
